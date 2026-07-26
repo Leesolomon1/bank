@@ -256,6 +256,19 @@ class BankTTSApp(App):
             on_release=self.save_current_settings
         )
         content.add_widget(save_button)
+        
+        # 음성 출력 단독 테스트 버튼
+        voice_test_button = KoreanButton(
+            text="음성 테스트",
+            size_hint_y=None,
+            height=dp(52),
+        )
+
+        voice_test_button.bind(
+            on_release=self.test_voice
+        )
+
+        content.add_widget(voice_test_button)
 
         # 상태 표시
         self.status_label = KoreanLabel(
@@ -623,6 +636,31 @@ class BankTTSApp(App):
             f"{transaction.name}, "
             f"{amount_text} 출금"
         )
+        
+            # =====================================================
+    # 음성 출력 단독 테스트
+    # =====================================================
+
+    def test_voice(
+        self,
+        instance=None,
+    ) -> None:
+        if not self.save_current_settings():
+            return
+
+        if not self.settings["enabled"]:
+            self.set_status(
+                "음성 알림 사용이 꺼져 있어."
+            )
+            return
+
+        message = "음성 테스트입니다."
+
+        self.set_status(
+            f"대기열 추가: {message}"
+        )
+
+        self.tts.add(message)
 
     # =====================================================
     # 연속 알림 테스트
