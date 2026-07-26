@@ -1,0 +1,9 @@
+{
+  "enabled": true,
+  "read_deposit": true,
+  "read_withdraw": true,
+  "minimum_amount": 1,
+  "quiet_enabled": false,
+  "quiet_start": "23:00",
+  "quiet_end": "08:00"
+}
