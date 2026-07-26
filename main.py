@@ -23,7 +23,14 @@ from tts_queue import TTSQueue
 # 한글 글꼴 설정
 # =========================================================
 
+from pathlib import Path
+
 def find_korean_font() -> str:
+    font_path = Path(__file__).resolve().parent / "NanumGothic.ttf"
+
+    if font_path.is_file():
+        return str(font_path)
+
     return "Roboto"
 
 
