@@ -3,7 +3,7 @@ import threading
 import time
 from typing import Callable, Optional
 
-from jnius import autoclass
+from jnius import autoclass, cast
 from kivy.clock import Clock
 
 
@@ -82,6 +82,7 @@ class TTSQueue:
         )
         Locale = autoclass("java.util.Locale")
         Bundle = autoclass("android.os.Bundle")
+        JavaString = autoclass("java.lang.String")
 
         korean = Locale("ko", "KR")
         language_result = self.tts.setLanguage(korean)
@@ -96,12 +97,27 @@ class TTSQueue:
 
         params = Bundle()
 
-        self.tts.speak(
-            message,
+        java_message = JavaString(message)
+        java_message = cast(
+            "java.lang.CharSequence",
+            java_message,
+        )
+
+        utterance_id = JavaString(
+            "bank_tts_message"
+        )
+
+        result = self.tts.speak(
+            java_message,
             TextToSpeech.QUEUE_FLUSH,
             params,
-            "bank_tts_message",
+            utterance_id,
         )
+
+        if result == TextToSpeech.ERROR:
+            raise RuntimeError(
+                "음성 재생 요청에 실패했습니다."
+            )
         
 
     def _run(self) -> None:
