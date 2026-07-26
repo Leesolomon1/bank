@@ -81,16 +81,28 @@ class TTSQueue:
             "android.speech.tts.TextToSpeech"
         )
         Locale = autoclass("java.util.Locale")
+        Bundle = autoclass("android.os.Bundle")
 
         korean = Locale("ko", "KR")
-        self.tts.setLanguage(korean)
+        language_result = self.tts.setLanguage(korean)
+
+        if language_result in (
+            TextToSpeech.LANG_MISSING_DATA,
+            TextToSpeech.LANG_NOT_SUPPORTED,
+        ):
+            raise RuntimeError(
+                "휴대폰에서 한국어 음성을 지원하지 않습니다."
+            )
+
+        params = Bundle()
 
         self.tts.speak(
             message,
             TextToSpeech.QUEUE_FLUSH,
-            None,
+            params,
             "bank_tts_message",
         )
+        
 
     def _run(self) -> None:
         while self.running:
