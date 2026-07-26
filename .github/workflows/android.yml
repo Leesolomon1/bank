@@ -10,54 +10,26 @@ permissions:
   contents: read
 
 jobs:
-  build:
-    runs-on: ubuntu-22.04
-    timeout-minutes: 90
+  build-android:
+    name: Build Android APK
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
 
     steps:
-      - name: 소스 코드 가져오기
-        uses: actions/checkout@v5
+      - name: 프로젝트 가져오기
+        uses: actions/checkout@v6
 
-      - name: Java 17 설치
-        uses: actions/setup-java@v5
+      - name: Buildozer로 APK 만들기
+        uses: ArtemSBulgakov/buildozer-action@v1
+        id: buildozer
         with:
-          distribution: temurin
-          java-version: "17"
-
-      - name: 시스템 패키지 설치
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y \
-            git \
-            zip \
-            unzip \
-            autoconf \
-            automake \
-            libtool \
-            pkg-config \
-            zlib1g-dev \
-            libncurses-dev \
-            cmake \
-            libffi-dev \
-            libssl-dev \
-            python3-pip \
-            python3-venv
-
-      - name: Buildozer 설치
-        run: |
-          python3 -m venv build-venv
-          source build-venv/bin/activate
-          python -m pip install --upgrade pip setuptools wheel
-          python -m pip install "cython<3" buildozer
-
-      - name: APK 빌드
-        run: |
-          source build-venv/bin/activate
-          buildozer android debug
+          command: buildozer android debug
+          workdir: .
+          buildozer_version: stable
 
       - name: APK 업로드
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: bank-apk
-          path: bin/*.apk
+          path: ${{ steps.buildozer.outputs.filename }}
           if-no-files-found: error

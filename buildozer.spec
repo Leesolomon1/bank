@@ -34,6 +34,8 @@ android.minapi = 23
 android.ndk = 27c
 android.archs = arm64-v8a
 
+android.accept_sdk_license = True
+
 # 현재 단계에서는 기본 권한만 설정
 android.permissions = POST_NOTIFICATIONS
 
