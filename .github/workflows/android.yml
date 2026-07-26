@@ -19,17 +19,30 @@ jobs:
       - name: 프로젝트 가져오기
         uses: actions/checkout@v6
 
-      - name: Buildozer로 APK 만들기
-        uses: ArtemSBulgakov/buildozer-action@v1
-        id: buildozer
-        with:
-          command: buildozer android debug
-          workdir: .
-          buildozer_version: stable
+      - name: Buildozer 캐시 폴더 준비
+        run: |
+          mkdir -p "$HOME/.buildozer"
+
+      - name: 공식 Buildozer 이미지 받기
+        run: |
+          docker pull ghcr.io/kivy/buildozer:latest
+
+      - name: APK 빌드
+        run: |
+          docker run --rm \
+            --volume "$HOME/.buildozer:/home/user/.buildozer" \
+            --volume "$GITHUB_WORKSPACE:/home/user/hostcwd" \
+            --workdir /home/user/hostcwd \
+            ghcr.io/kivy/buildozer:latest \
+            android debug
+
+      - name: 만들어진 APK 확인
+        run: |
+          find bin -maxdepth 1 -type f -name "*.apk" -print
 
       - name: APK 업로드
         uses: actions/upload-artifact@v7
         with:
           name: bank-apk
-          path: ${{ steps.buildozer.outputs.filename }}
+          path: bin/*.apk
           if-no-files-found: error
