@@ -24,11 +24,6 @@ from tts_queue import TTSQueue
 # =========================================================
 
 def find_korean_font() -> str:
-    bundled_font = Path(__file__).resolve().parent / "NotoSansKR-Regular.ttf"
-
-    if bundled_font.exists():
-        return str(bundled_font)
-
     return "Roboto"
 
 
