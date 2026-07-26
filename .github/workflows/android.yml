@@ -1,0 +1,63 @@
+name: Android APK Build
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 90
+
+    steps:
+      - name: 소스 코드 가져오기
+        uses: actions/checkout@v4
+
+      - name: Java 17 설치
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - name: 시스템 패키지 설치
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            git \
+            zip \
+            unzip \
+            autoconf \
+            automake \
+            libtool \
+            pkg-config \
+            zlib1g-dev \
+            libncurses-dev \
+            cmake \
+            libffi-dev \
+            libssl-dev \
+            python3-pip \
+            python3-venv
+
+      - name: Buildozer 설치
+        run: |
+          python3 -m venv build-venv
+          source build-venv/bin/activate
+          python -m pip install --upgrade pip setuptools wheel
+          python -m pip install "cython<3" buildozer
+
+      - name: APK 빌드
+        run: |
+          source build-venv/bin/activate
+          yes | buildozer android debug
+
+      - name: APK 업로드
+        uses: actions/upload-artifact@v4
+        with:
+          name: bank-apk
+          path: bin/*.apk
+          if-no-files-found: error
