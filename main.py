@@ -24,26 +24,6 @@ from tts_queue import TTSQueue
 # =========================================================
 
 def find_korean_font() -> str:
-    """Windows와 Android에서 사용할 한글 글꼴을 찾습니다."""
-
-    # APK에 함께 넣은 한글 글꼴
-    bundled_font = Path(__file__).resolve().parent / "NotoSansKR-Regular.ttf"
-
-    if bundled_font.exists():
-        return str(bundled_font)
-
-    # Windows에서 실행할 때 사용할 글꼴
-    windows_fonts = [
-        Path("C:/Windows/Fonts/malgun.ttf"),
-        Path("C:/Windows/Fonts/malgunbd.ttf"),
-        Path("C:/Windows/Fonts/gulim.ttc"),
-    ]
-
-    for font_path in windows_fonts:
-        if font_path.exists():
-            return str(font_path)
-
-    # 글꼴을 찾지 못해도 앱이 종료되지 않도록 기본 글꼴 사용
     return "Roboto"
 
 
