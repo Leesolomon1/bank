@@ -20,7 +20,7 @@ source.exclude_dirs = .git,.github,.venv,__pycache__,bin,.buildozer
 version = 0.1
 
 # 사용할 라이브러리
-requirements = python3,kivy,pyjnius
+requirements = python3==3.11.9,hostpython3==3.11.9,kivy==2.3.0,pyjnius
 
 # 화면 방향
 orientation = portrait
@@ -29,17 +29,24 @@ orientation = portrait
 fullscreen = 0
 
 # Android 설정
-android.api = 35
+android.api = 34
 android.minapi = 24
-android.ndk = 27c
+android.ndk = 25b
 android.archs = arm64-v8a
+
+# Java 소스 폴더
+android.add_src = java
+
+# NotificationListenerService 등록
+android.extra_manifest_application_arguments = manifest/notification_service.xml
+
 
 android.accept_sdk_license = True
 
-# 현재 단계에서는 기본 권한만 설정
+# 알림 권한
 android.permissions = POST_NOTIFICATIONS
 
-# 로그 확인을 위한 설정
+# 로그 설정
 android.logcat_filters = *:S python:D
 
 [buildozer]

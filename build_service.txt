@@ -1,0 +1,320 @@
+# Ensure build layout
+# Check configuration tokens
+# Preparing build
+# Check requirements for android
+# Search for Git (git)
+#  -> found at /usr/bin/git
+# Search for Cython (cython)
+#  -> found at /home/leesolomon/venv_buildozer/bin/cython
+# Search for Java compiler (javac)
+#  -> found at /usr/bin/javac
+# Search for Java keytool (keytool)
+#  -> found at /usr/bin/keytool
+# Install platform
+# Run 'git config --get remote.origin.url' ...
+# Cwd /home/leesolomon/bank/.buildozer/android/platform/python-for-android
+https://github.com/kivy/python-for-android.git
+# Run 'git branch -vv' ...
+# Cwd /home/leesolomon/bank/.buildozer/android/platform/python-for-android
+* master 58d21141 [origin/master] Merge pull request #3321 from kivy/release-2026.05.09
+# Run '/home/leesolomon/venv_buildozer/bin/python3 -m pip install -q appdirs colorama>=0.3.3 jinja2 sh>=2, <3.0; sys_platform!="win32" meson ninja build toml packaging setuptools wheel~=0.43.0' ...
+# Cwd None
+# Apache ANT found at /home/leesolomon/.buildozer/android/platform/apache-ant-1.9.4
+# Android SDK found at /home/leesolomon/.buildozer/android/platform/android-sdk
+# Recommended android's NDK version by p4a is: 28c
+# Android NDK found at /home/leesolomon/.buildozer/android/platform/android-ndk-r25b
+# Run '/home/leesolomon/venv_buildozer/bin/python3 -m pythonforandroid.toolchain aab -h --color=always --storage-dir=/home/leesolomon/bank/.buildozer/android/platform/build-arm64-v8a --ndk-api=24 --ignore-setup-py --debug' ...
+# Cwd /home/leesolomon/bank/.buildozer/android/platform/python-for-android
+# Check application requirements
+# Compile platform
+# Run '/home/leesolomon/venv_buildozer/bin/python3 -m pythonforandroid.toolchain create --dist_name=banktts --bootstrap=sdl2 --requirements=python3==3.11.9,hostpython3==3.11.9,kivy==2.3.0,pyjnius --arch=arm64-v8a --copy-libs --color=always --storage-dir=/home/leesolomon/bank/.buildozer/android/platform/build-arm64-v8a --ndk-api=24 --ignore-setup-py --debug' ...
+# Cwd /home/leesolomon/bank/.buildozer/android/platform/python-for-android
+[WARNING]: prerequisites.py is experimental and does not support all prerequisites yet.
+[WARNING]: Please report any issues to the python-for-android issue tracker.
+[WARNING]: prerequisites.py is experimental and does not support all prerequisites yet.
+[WARNING]: Please report any issues to the python-for-android issue tracker.
+[1m[INFO][0m:    Recipe python3: version "3.11.9" requested
+[1m[INFO][0m:    Recipe hostpython3: version "3.11.9" requested
+[1m[INFO][0m:    Recipe kivy: version "2.3.0" requested
+[1m[INFO][0m:    Will compile for the following archs: arm64-v8a
+[1m[INFO][0m:    Found Android API target in $ANDROIDAPI: 34
+[1m[INFO][0m:    Available Android APIs are (34, 36)
+[1m[INFO][0m:    Requested API target 34 is available, continuing.
+[1m[INFO][0m:    Found NDK dir in $ANDROIDNDK: /home/leesolomon/.buildozer/android/platform/android-ndk-r25b
+[1m[INFO][0m:    Found NDK version 25b
+[1m[INFO][0m:    Getting NDK API version (i.e. minimum supported API) from user argument
+[1m[INFO][0m:    ccache is missing, the build will not be optimized in the future.
+[1m[90m[DEBUG][39m[0m:   All possible dists: [<Distribution: name banktts with recipes (hostpython3, libffi, openssl, sdl2_image, sdl2_mixer, sdl2_ttf, sqlite3, python3, sdl2, pyjnius, setuptools, android, kivy, filetype, chardet, urllib3, six, certifi, requests, idna)>]
+[1m[90m[DEBUG][39m[0m:   Dist matching name and arch: [<Distribution: name banktts with recipes (hostpython3, libffi, openssl, sdl2_image, sdl2_mixer, sdl2_ttf, sqlite3, python3, sdl2, pyjnius, setuptools, android, kivy, filetype, chardet, urllib3, six, certifi, requests, idna)>]
+[1m[90m[DEBUG][39m[0m:   Dist matching ndk_api and recipe: [<Distribution: name banktts with recipes (hostpython3, libffi, openssl, sdl2_image, sdl2_mixer, sdl2_ttf, sqlite3, python3, sdl2, pyjnius, setuptools, android, kivy, filetype, chardet, urllib3, six, certifi, requests, idna)>]
+[1m[INFO][0m:    Of the existing distributions, the following meet the given requirements:
+[1m[INFO][0m:    	[32m[1mbanktts[0m: min API 24, includes recipes ([32mhostpython3, libffi, openssl, sdl2_image, sdl2_mixer, sdl2_ttf, sqlite3, python3, sdl2, pyjnius, setuptools, android, kivy, filetype, chardet, urllib3, six, certifi, requests, idna[0m), built for archs ([34marm64-v8a[0m)
+[1m[INFO][0m:    [1m[94mbanktts has compatible recipes, using this one[0m
+# Build the application #4
+# Copy application source from /home/leesolomon/bank
+# Remove directory and subdirectory /home/leesolomon/bank/.buildozer/android/app
+# Create directory /home/leesolomon/bank/.buildozer/android/app
+# Copy /home/leesolomon/bank/settings.json to /home/leesolomon/bank/.buildozer/android/app/settings.json
+# Copy /home/leesolomon/bank/main.py to /home/leesolomon/bank/.buildozer/android/app/main.py
+# Copy /home/leesolomon/bank/tts_queue.py to /home/leesolomon/bank/.buildozer/android/app/tts_queue.py
+# Copy /home/leesolomon/bank/NanumGothic.ttf to /home/leesolomon/bank/.buildozer/android/app/NanumGothic.ttf
+# Copy /home/leesolomon/bank/settings_manager.py to /home/leesolomon/bank/.buildozer/android/app/settings_manager.py
+# Copy /home/leesolomon/bank/parser.py to /home/leesolomon/bank/.buildozer/android/app/parser.py
+# copy /home/leesolomon/bank/.buildozer/applibs to /home/leesolomon/bank/.buildozer/android/app/_applibs
+# Copy /home/leesolomon/venv_buildozer/lib/python3.14/site-packages/buildozer/sitecustomize.py to /home/leesolomon/bank/.buildozer/android/app/sitecustomize.py
+# Package the application
+# project.properties updated
+# Run '/home/leesolomon/venv_buildozer/bin/python3 -m pythonforandroid.toolchain apk --bootstrap sdl2 --dist_name banktts --name 은행 알림 음성 안내 --version 0.1 --package com.leesolomon.banktts --minsdk 24 --ndk-api 24 --private /home/leesolomon/bank/.buildozer/android/app --permission POST_NOTIFICATIONS --android-entrypoint org.kivy.android.PythonActivity --android-apptheme @android:style/Theme.NoTitleBar --orientation portrait --window --enable-androidx --copy-libs --add-source /home/leesolomon/bank/java --extra-manifest-application-arguments <service\n    android:name="com.leesolomon.banktts.NotificationService"\n    android:label="은행 알림 음성 안내"\n    android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE"\n    android:exported="true">\n\n    <intent-filter>\n        <action android:name="android.service.notification.NotificationListenerService" />\n    </intent-filter>\n\n</service>\n --arch arm64-v8a --color=always --storage-dir=/home/leesolomon/bank/.buildozer/android/platform/build-arm64-v8a --ndk-api=24 --ignore-setup-py --debug' ...
+# Cwd /home/leesolomon/bank/.buildozer/android/platform/python-for-android
+[WARNING]: prerequisites.py is experimental and does not support all prerequisites yet.
+[WARNING]: Please report any issues to the python-for-android issue tracker.
+[WARNING]: prerequisites.py is experimental and does not support all prerequisites yet.
+[WARNING]: Please report any issues to the python-for-android issue tracker.
+[1m[INFO][0m:    Will compile for the following archs: arm64-v8a
+[1m[INFO][0m:    Found Android API target in $ANDROIDAPI: 34
+[1m[INFO][0m:    Available Android APIs are (34, 36)
+[1m[INFO][0m:    Requested API target 34 is available, continuing.
+[1m[INFO][0m:    Found NDK dir in $ANDROIDNDK: /home/leesolomon/.buildozer/android/platform/android-ndk-r25b
+[1m[INFO][0m:    Found NDK version 25b
+[1m[INFO][0m:    Getting NDK API version (i.e. minimum supported API) from user argument
+[1m[INFO][0m:    ccache is missing, the build will not be optimized in the future.
+[1m[90m[DEBUG][39m[0m:   All possible dists: [<Distribution: name banktts with recipes (hostpython3, libffi, openssl, sdl2_image, sdl2_mixer, sdl2_ttf, sqlite3, python3, sdl2, pyjnius, setuptools, android, kivy, filetype, chardet, urllib3, six, certifi, requests, idna)>]
+[1m[90m[DEBUG][39m[0m:   Dist matching name and arch: [<Distribution: name banktts with recipes (hostpython3, libffi, openssl, sdl2_image, sdl2_mixer, sdl2_ttf, sqlite3, python3, sdl2, pyjnius, setuptools, android, kivy, filetype, chardet, urllib3, six, certifi, requests, idna)>]
+[1m[90m[DEBUG][39m[0m:   Dist matching ndk_api and recipe: [<Distribution: name banktts with recipes (hostpython3, libffi, openssl, sdl2_image, sdl2_mixer, sdl2_ttf, sqlite3, python3, sdl2, pyjnius, setuptools, android, kivy, filetype, chardet, urllib3, six, certifi, requests, idna)>]
+[1m[INFO][0m:    Of the existing distributions, the following meet the given requirements:
+[1m[INFO][0m:    	[32m[1mbanktts[0m: min API 24, includes recipes ([32mhostpython3, libffi, openssl, sdl2_image, sdl2_mixer, sdl2_ttf, sqlite3, python3, sdl2, pyjnius, setuptools, android, kivy, filetype, chardet, urllib3, six, certifi, requests, idna[0m), built for archs ([34marm64-v8a[0m)
+[1m[INFO][0m:    [1m[94mbanktts has compatible recipes, using this one[0m
+[1m[90m[DEBUG][39m[0m:   All possible dists: [<Distribution: name banktts with recipes (hostpython3, libffi, openssl, sdl2_image, sdl2_mixer, sdl2_ttf, sqlite3, python3, sdl2, pyjnius, setuptools, android, kivy, filetype, chardet, urllib3, six, certifi, requests, idna)>]
+[1m[90m[DEBUG][39m[0m:   Dist matching name and arch: [<Distribution: name banktts with recipes (hostpython3, libffi, openssl, sdl2_image, sdl2_mixer, sdl2_ttf, sqlite3, python3, sdl2, pyjnius, setuptools, android, kivy, filetype, chardet, urllib3, six, certifi, requests, idna)>]
+[1m[90m[DEBUG][39m[0m:   Dist matching ndk_api and recipe: [<Distribution: name banktts with recipes (hostpython3, libffi, openssl, sdl2_image, sdl2_mixer, sdl2_ttf, sqlite3, python3, sdl2, pyjnius, setuptools, android, kivy, filetype, chardet, urllib3, six, certifi, requests, idna)>]
+[1m[INFO][0m:    Of the existing distributions, the following meet the given requirements:
+[1m[INFO][0m:    	[32m[1mbanktts[0m: min API 24, includes recipes ([32mhostpython3, libffi, openssl, sdl2_image, sdl2_mixer, sdl2_ttf, sqlite3, python3, sdl2, pyjnius, setuptools, android, kivy, filetype, chardet, urllib3, six, certifi, requests, idna[0m), built for archs ([34marm64-v8a[0m)
+[1m[INFO][0m:    [1m[94mbanktts has compatible recipes, using this one[0m
+[1m[INFO][0m:    [36m-> directory context /home/leesolomon/bank/.buildozer/android/platform/build-arm64-v8a/build/bootstrap_builds/sdl2[39m
+[1m[INFO][0m:    [36m<- directory context /home/leesolomon/bank/.buildozer/android/platform/python-for-android[39m
+[1m[INFO][0m:    [36m-> directory context /home/leesolomon/bank/.buildozer/android/platform/build-arm64-v8a/dists/banktts[39m
+[1m[90m[DEBUG][39m[0m:   Remove directory and subdirectory src/main/assets
+[1m[90m[DEBUG][39m[0m:   Create directory src/main/assets
+Compiling '/home/leesolomon/bank/.buildozer/android/app/main.py'...
+Compiling '/home/leesolomon/bank/.buildozer/android/app/tts_queue.py'...
+Compiling '/home/leesolomon/bank/.buildozer/android/app/settings_manager.py'...
+Compiling '/home/leesolomon/bank/.buildozer/android/app/parser.py'...
+Compiling '/home/leesolomon/bank/.buildozer/android/app/sitecustomize.py'...
+[1m[90m[DEBUG][39m[0m:   Remove directory and subdirectory /tmp/p4a-extra-env-0nf8g9dx
+[1m[90m[DEBUG][39m[0m:   Remove directory and subdirectory src/main/res
+[1m[INFO][0m:    Detected highest available build tools version to be 37.0.0
+[1m[90m[DEBUG][39m[0m:   [90m->[0m running gradlew clean assembleDebug[0m
+[1m[90m[DEBUG][39m[0m:   	
+[1m[90m[DEBUG][39m[0m:   	
+[1m[90m[DEBUG][39m[0m:   	[2A[1m<[0;1m-------------> 0% CONFIGURING [96ms][m[37D[1B[1m> root project > Resolve dependencies of classpath[m[50D[1B[2A[1m<[0;1m-------------> 0% CONFIGURING [196ms][m[38D[1B[1m> root project > Resolve files of configuration 'classpath' > Resolve files of [m[79D[1B[2A[1m<[0;1m-------------> 0% CONFIGURING [296ms][m[38D[1B[1m> root project[m[0K[14D[1B[2A[1m<[0;32;1m=============[0;39;1m> 100% CONFIGURING [396ms][m[40D[1B> IDLE[0K[6D[1B[2A[1m<[0;32;1m==[0;39;1m-----------> 17% EXECUTING [496ms][m[0K[37D[1B[1m> :mapDebugSourceSetPaths[m[25D[1B
+[1m[90m[DEBUG][39m[0m:   	[3A[1m<[0;32;1m===[0;39;1m----------> 29% EXECUTING [596ms][m[37D[1B[1m> :parseDebugLocalResources[m[27D[1B[1m> :extractDeepLinksDebug[m[24D[1B[3A[31;1m> Task :processDebugMainManifest[0;39m[31m FAILED[39m
+[1m[90m[DEBUG][39m[0m:   	[0K
+[1m[90m[DEBUG][39m[0m:   	[Incubating] Problems report is available at: file:///home/leesolomon/bank/.buildozer/android/platform/build-arm64-v8a/dists/banktts/build/reports/problems/problems-report.html
+[1m[90m[DEBUG][39m[0m:   	
+[1m[90m[DEBUG][39m[0m:   	[31mFAILURE: [39m[31mBuild failed with an exception.[39m
+[1m[90m[DEBUG][39m[0m:   	
+[1m[90m[DEBUG][39m[0m:   	* What went wrong:
+[1m[90m[DEBUG][39m[0m:   	Execution failed for task ':processDebugMainManifest'.
+[1m[90m[DEBUG][39m[0m:   	[33m> [39mcom.android.manifmerger.ManifestMerger2$MergeFailureException: Error parsing /home/leesolomon/bank/.buildozer/android/platform/build-arm64-v8a/dists/banktts/src/main/AndroidManifest.xml
+[1m[90m[DEBUG][39m[0m:   	
+[1m[90m[DEBUG][39m[0m:   	* Try:
+[1m[90m[DEBUG][39m[0m:   	[33m> [39mRun with [1m--stacktrace[m option to get the stack trace.
+[1m[90m[DEBUG][39m[0m:   	[33m> [39mRun with [1m--info[m or [1m--debug[m option to get more log output.
+[1m[90m[DEBUG][39m[0m:   	[33m> [39mRun with [1m--scan[m to get full insights.
+[1m[90m[DEBUG][39m[0m:   	[33m> [39mGet more help at [1mhttps://help.gradle.org[m.
+[1m[90m[DEBUG][39m[0m:   	
+[1m[90m[DEBUG][39m[0m:   	Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+[1m[90m[DEBUG][39m[0m:   	
+[1m[90m[DEBUG][39m[0m:   	You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+[1m[90m[DEBUG][39m[0m:   	
+[1m[90m[DEBUG][39m[0m:   	For more on this, please refer to https://docs.gradle.org/8.14.3/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+[1m[90m[DEBUG][39m[0m:   	
+[1m[90m[DEBUG][39m[0m:   	[31;1mBUILD FAILED[0;39m in 1s
+[1m[90m[DEBUG][39m[0m:   	12 actionable tasks: 12 executed
+[1m[90m[DEBUG][39m[0m:   	[0K
+[1m[90m[DEBUG][39m[0m:   	[0K
+[1m[90m[DEBUG][39m[0m:   	[0K
+[1m[90m[DEBUG][39m[0m:   	[3A[1m<[0;1m-------------> 0% WAITING[m[26D[1B> IDLE[6D[1B> IDLE[6D[1B[3A[2K[1B[2K[1B[2K[2A[0m[?12l[?25h
+Exception in thread background thread for pid 117406:
+Traceback (most recent call last):
+  File "/usr/lib/python3.14/threading.py", line 1082, in _bootstrap_inner
+    self._context.run(self.run)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/usr/lib/python3.14/threading.py", line 1024, in run
+    self._target(*self._args, **self._kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leesolomon/venv_buildozer/lib/python3.14/site-packages/sh/__init__.py", line 1709, in wrap
+    fn(*rgs, **kwargs)
+    ~~^^^^^^^^^^^^^^^^
+  File "/home/leesolomon/venv_buildozer/lib/python3.14/site-packages/sh/__init__.py", line 2720, in background_thread
+    handle_exit_code(exit_code)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/home/leesolomon/venv_buildozer/lib/python3.14/site-packages/sh/__init__.py", line 2411, in fn
+    return self.command.handle_command_exit_code(exit_code)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/home/leesolomon/venv_buildozer/lib/python3.14/site-packages/sh/__init__.py", line 820, in handle_command_exit_code
+    raise exc
+sh.ErrorReturnCode_1: 
+
+  RAN: /home/leesolomon/bank/.buildozer/android/platform/build-arm64-v8a/dists/banktts/gradlew clean assembleDebug
+
+  STDOUT:
+
+
+[2A[1m<[0;1m-------------> 0% CONFIGURING [96ms][m[37D[1B[1m> root project > Resolve dependencies of classpath[m[50D[1B[2A[1m<[0;1m-------------> 0% CONFIGURING [196ms][m[38D[1B[1m> root project > Resolve files of configuration 'classpath' > Resolve files of [m[79D[1B[2A[1m<[0;1m-------------> 0% CONFIGURING [296ms][m[38D[1B[1m> root project[m[0K[14D[1B[2A[1m<[0;32;1m=============[0;39;1m> 100% CONFIGURING [396ms][m[40D[1B> IDLE[0K[6D[1B[2A[1m<[0;32;1m==[0;39;1m-----------> 17% EXECUTING [496ms][m[0K[37D[1B[1m> :mapDebugSourceSetPaths[m[25D[1B
+[3A[1m<[0;32;1m===[0;39;1m----------> 29% EXECUTING [596ms][m[37D[1B[1m> :parseDebugLocalResources[m[27D[1B[1m> :extractDeepLinksDebug[m[24D[1B[3A[31;1m> Task :processDebugMainManifest[0;39m[31m FAILED[39m
+[0K
+[Incubating] Problems report is available at: file:///home/leesolomon/bank/.buildozer/android/platform/build-arm64-v8a/dists/banktts/build/reports/problems/problems-report.html
+
+[31mFAILURE: [39m[31mBuild failed with an exception.[39m
+
+* What went wrong:
+Execution failed for task ':processDebugMainManifest'.
+[33m> [39mcom.android.manifmerger.ManifestMerger2$MergeFailureException: Error parsing /home/leesolomon/bank/.buildozer/android/platform/build-arm64-v8a/dists/banktts/src/main/AndroidManifest.xml
+
+* Try:
+[33m> [39mRun with [1m--stacktrace[m option to get the stack trace.
+[33m> [39mRun with [1m--info[m or [1m--debug[m option to get more log output.
+[33m> [39mRun with [1m--scan[m to get full insights.
+[33m> [39mGet more help at [1mhttps://help.gradle.org[m.
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.14.3/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+[31;1mBUILD FAILED[0;39m in 1s
+12 actionable tasks: 12 executed
+[0K
+[0K
+[0K
+[3A[1m<[0;1m-------------> 0% WAITING[m[26D[1B> IDLE[6D[1B> IDLE[6D[1B[3A[2K[1B[2K[1B[2K[2A[0m[?12l[?25h
+
+  STDERR:
+
+[1m[INFO][0m:    STDOUT (last 20 lines of 31):
+[33m	[33m> [39mcom.android.manifmerger.ManifestMerger2$MergeFailureException: Error parsing /home/leesolomon/bank/.buildozer/android/platform/build-arm64-v8a/dists/banktts/src/main/AndroidManifest.xml	
+	
+* Try:	
+[33m> [39mRun with [1m--stacktrace[m option to get the stack trace.	
+[33m> [39mRun with [1m--info[m or [1m--debug[m option to get more log output.	
+[33m> [39mRun with [1m--scan[m to get full insights.	
+[33m> [39mGet more help at [1mhttps://help.gradle.org[m.	
+	
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.	
+	
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.	
+	
+For more on this, please refer to https://docs.gradle.org/8.14.3/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.	
+	
+[31;1mBUILD FAILED[0;39m in 1s	
+12 actionable tasks: 12 executed	
+[0K	
+[0K	
+[0K	
+[3A[1m<[0;1m-------------> 0% WAITING[m[26D[1B> IDLE[6D[1B> IDLE[6D[1B[3A[2K[1B[2K[1B[2K[2A[0m[?12l[?25h[39m
+[1m[INFO][0m:    STDERR:
+[31m	[39m
+[1m[INFO][0m:    [33mENV:[39m
+export SHELL='/bin/bash'
+export WSL2_GUI_APPS_ENABLED='1'
+export WSL_DISTRO_NAME='Ubuntu'
+export NAME='DESKTOP-TLDPS1M'
+export PWD='/home/leesolomon/bank'
+export LOGNAME='leesolomon'
+export HOME='/home/leesolomon'
+export LANG='C.UTF-8'
+export WSL_INTEROP='/run/WSL/337_interop'
+export LS_COLORS='rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.swp=00;90:*.tmp=00;90:*.dpkg-dist=00;90:*.dpkg-old=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:'
+export VIRTUAL_ENV='/home/leesolomon/venv_buildozer'
+export WAYLAND_DISPLAY='wayland-0'
+export LESSCLOSE='/usr/bin/lesspipe %s %s'
+export TERM='xterm-256color'
+export LESSOPEN='| /usr/bin/lesspipe %s'
+export USER='leesolomon'
+export DISPLAY=':0'
+export SHLVL='1'
+export VIRTUAL_ENV_PROMPT='venv_buildozer'
+export XDG_RUNTIME_DIR='/run/user/1000'
+export PS1='(venv_buildozer) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+export WSLENV=''
+export XDG_DATA_DIRS='/usr/local/share:/usr/share:/var/lib/snapd/desktop'
+export PATH='/home/leesolomon/.buildozer/android/platform/apache-ant-1.9.4/bin:/home/leesolomon/venv_buildozer/bin:/home/leesolomon/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Users/wjdgy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand:/mnt/c/Users/wjdgy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli:/mnt/c/Windows/System32/OpenSSH:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/java8path:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/Users/wjdgy/OneDrive/바탕 화면/노래봇/ffmpeg-7.1.1-essentials_build/ffmpeg-7.1.1-essentials_build/bin:/mnt/c/Pro:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/wjdgy/OneDrive/바탕 화면/ffmpeg-2025-11-10-git-133a0bcb13-full_build/bin:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR:/mnt/c/Program Files/dotnet/:/mnt/c/Users/wjdgy/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/wjdgy/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/wjdgy/OneDrive/바탕 화면/ffmpeg-2026-04-26-git-4867d251ad-essentials_build/ffmpeg-2026-04-26-git-4867d251ad-essentials_build/binc:/Users/wjdgy/.vscode/extensions/vscjava.vscode-java-debug-0.59.0/bundled/scripts/noConfigScripts:/mnt/c/Users/wjdgy/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts:/snap/bin'
+export DBUS_SESSION_BUS_ADDRESS='unix:path=/run/user/1000/bus'
+export HOSTTYPE='x86_64'
+export PULSE_SERVER='unix:/mnt/wslg/PulseServer'
+export OLDPWD='/home/leesolomon/bank'
+export _='/home/leesolomon/venv_buildozer/bin/buildozer'
+export PACKAGES_PATH='/home/leesolomon/.buildozer/android/packages'
+export ANDROIDSDK='/home/leesolomon/.buildozer/android/platform/android-sdk'
+export ANDROIDNDK='/home/leesolomon/.buildozer/android/platform/android-ndk-r25b'
+export ANDROIDAPI='34'
+export ANDROIDMINAPI='24'
+export ANDROID_NDK_HOME='/home/leesolomon/.buildozer/android/platform/android-ndk-r25b'
+export ANDROID_HOME='/home/leesolomon/.buildozer/android/platform/android-sdk'
+
+[1m[INFO][0m:    [33mCOMMAND:[39m
+cd /home/leesolomon/bank/.buildozer/android/platform/build-arm64-v8a/dists/banktts && /home/leesolomon/bank/.buildozer/android/platform/build-arm64-v8a/dists/banktts/gradlew clean assembleDebug
+
+[1m[31m[WARNING][39m[0m: [31mERROR: /home/leesolomon/bank/.buildozer/android/platform/build-arm64-v8a/dists/banktts/gradlew failed![39m
+No setup.py/pyproject.toml used, copying full private data into .apk.
+Applying Java source code patches...
+Applying patch: src/patches/SDLActivity.java.patch
+Warning: failed to apply patch (exit code 1), assuming it is already applied:  src/patches/SDLActivity.java.patch
+Applying patch: src/patches/SDLSurface.java.patch
+Warning: failed to apply patch (exit code 1), assuming it is already applied:  src/patches/SDLSurface.java.patch
+# Command failed: ('/home/leesolomon/venv_buildozer/bin/python3', '-m', 'pythonforandroid.toolchain', 'apk', '--bootstrap', 'sdl2', '--dist_name', 'banktts', '--name', '은행 알림 음성 안내', '--version', '0.1', '--package', 'com.leesolomon.banktts', '--minsdk', '24', '--ndk-api', '24', '--private', '/home/leesolomon/bank/.buildozer/android/app', '--permission', 'POST_NOTIFICATIONS', '--android-entrypoint', 'org.kivy.android.PythonActivity', '--android-apptheme', '@android:style/Theme.NoTitleBar', '--orientation', 'portrait', '--window', '--enable-androidx', '--copy-libs', '--add-source', '/home/leesolomon/bank/java', '--extra-manifest-application-arguments', '<service\n    android:name="com.leesolomon.banktts.NotificationService"\n    android:label="은행 알림 음성 안내"\n    android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE"\n    android:exported="true">\n\n    <intent-filter>\n        <action android:name="android.service.notification.NotificationListenerService" />\n    </intent-filter>\n\n</service>\n', '--arch', 'arm64-v8a', '--color=always', '--storage-dir=/home/leesolomon/bank/.buildozer/android/platform/build-arm64-v8a', '--ndk-api=24', '--ignore-setup-py', '--debug')
+# Error code: 1
+# ENVIRONMENT:
+#     SHELL = '/bin/bash'
+#     WSL2_GUI_APPS_ENABLED = '1'
+#     WSL_DISTRO_NAME = 'Ubuntu'
+#     NAME = 'DESKTOP-TLDPS1M'
+#     PWD = '/home/leesolomon/bank'
+#     LOGNAME = 'leesolomon'
+#     HOME = '/home/leesolomon'
+#     LANG = 'C.UTF-8'
+#     WSL_INTEROP = '/run/WSL/337_interop'
+#     LS_COLORS = 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.swp=00;90:*.tmp=00;90:*.dpkg-dist=00;90:*.dpkg-old=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:'
+#     VIRTUAL_ENV = '/home/leesolomon/venv_buildozer'
+#     WAYLAND_DISPLAY = 'wayland-0'
+#     LESSCLOSE = '/usr/bin/lesspipe %s %s'
+#     TERM = 'xterm-256color'
+#     LESSOPEN = '| /usr/bin/lesspipe %s'
+#     USER = 'leesolomon'
+#     DISPLAY = ':0'
+#     SHLVL = '1'
+#     VIRTUAL_ENV_PROMPT = 'venv_buildozer'
+#     XDG_RUNTIME_DIR = '/run/user/1000'
+#     PS1 = ('(venv_buildozer) \\[\\e]0;\\u@\\h: '
+ '\\w\\a\\]${debian_chroot:+($debian_chroot)}\\[\\033[01;32m\\]\\u@\\h\\[\\033[00m\\]:\\[\\033[01;34m\\]\\w\\[\\033[00m\\]\\$ ')
+#     WSLENV = ''
+#     XDG_DATA_DIRS = '/usr/local/share:/usr/share:/var/lib/snapd/desktop'
+#     PATH = ('/home/leesolomon/.buildozer/android/platform/apache-ant-1.9.4/bin:/home/leesolomon/venv_buildozer/bin:/home/leesolomon/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Users/wjdgy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand:/mnt/c/Users/wjdgy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli:/mnt/c/Windows/System32/OpenSSH:/mnt/c/Program '
+ 'Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files '
+ '(x86)/Common Files/Oracle/Java/java8path:/mnt/c/Program Files (x86)/Common '
+ 'Files/Oracle/Java/javapath:/mnt/c/Users/wjdgy/OneDrive/바탕 '
+ '화면/노래봇/ffmpeg-7.1.1-essentials_build/ffmpeg-7.1.1-essentials_build/bin:/mnt/c/Pro:/mnt/c/Program '
+ 'Files/Git/cmd:/mnt/c/Users/wjdgy/OneDrive/바탕 '
+ '화면/ffmpeg-2025-11-10-git-133a0bcb13-full_build/bin:/mnt/c/Program '
+ 'Files/NVIDIA Corporation/NVIDIA App/NvDLISR:/mnt/c/Program '
+ 'Files/dotnet/:/mnt/c/Users/wjdgy/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/wjdgy/AppData/Local/Programs/Microsoft '
+ 'VS Code/bin:/mnt/c/Users/wjdgy/OneDrive/바탕 '
+ '화면/ffmpeg-2026-04-26-git-4867d251ad-essentials_build/ffmpeg-2026-04-26-git-4867d251ad-essentials_build/binc:/Users/wjdgy/.vscode/extensions/vscjava.vscode-java-debug-0.59.0/bundled/scripts/noConfigScripts:/mnt/c/Users/wjdgy/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts:/snap/bin')
+#     DBUS_SESSION_BUS_ADDRESS = 'unix:path=/run/user/1000/bus'
+#     HOSTTYPE = 'x86_64'
+#     PULSE_SERVER = 'unix:/mnt/wslg/PulseServer'
+#     OLDPWD = '/home/leesolomon/bank'
+#     _ = '/home/leesolomon/venv_buildozer/bin/buildozer'
+#     PACKAGES_PATH = '/home/leesolomon/.buildozer/android/packages'
+#     ANDROIDSDK = '/home/leesolomon/.buildozer/android/platform/android-sdk'
+#     ANDROIDNDK = '/home/leesolomon/.buildozer/android/platform/android-ndk-r25b'
+#     ANDROIDAPI = '34'
+#     ANDROIDMINAPI = '24'
+# 
+# Buildozer failed to execute the last command
+# The error might be hidden in the log above this error
+# Please read the full log, and search for it before
+# raising an issue with buildozer itself.
+# In case of a bug report, please add a full log with log_level = 2

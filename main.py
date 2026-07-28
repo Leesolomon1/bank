@@ -2,6 +2,7 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any
 
+from kivy.logger import Logger
 from kivy.app import App
 from kivy.clock import Clock
 from kivy.metrics import dp
@@ -13,6 +14,11 @@ from kivy.uix.label import Label
 from kivy.uix.scrollview import ScrollView
 from kivy.uix.spinner import Spinner, SpinnerOption
 from kivy.uix.textinput import TextInput
+from kivy.utils import platform
+
+# Android에서 Java NotificationService가 보낸 브로드캐스트 수신
+if platform == "android":
+    from jnius import autoclass
 
 from parser import Transaction, parse_transaction
 from settings_manager import load_settings, save_settings
@@ -121,6 +127,8 @@ class BankTTSApp(App):
     def build(self) -> ScrollView:
         self.title = "은행 입출금 음성 알림"
         self.settings: dict[str, Any] = load_settings()
+        self.last_notification_id = 0
+        self.notification_poll_event = None
 
         self.tts = TTSQueue(
             on_status=self.schedule_status_update
@@ -383,6 +391,80 @@ class BankTTSApp(App):
 
         root.add_widget(content)
         return root
+
+    # =====================================================
+    # Android 실제 알림 수신
+    # =====================================================
+
+    def on_start(self) -> None:
+        """Java 서비스가 저장한 실제 알림을 주기적으로 확인한다."""
+        if platform != "android":
+            return
+
+        self.notification_poll_event = Clock.schedule_interval(
+            self.check_saved_notification,
+            1.0,
+        )
+
+        Logger.info("BankTTS: 실제 알림 확인 시작")
+
+
+    def check_saved_notification(self, dt) -> None:
+        try:
+            PythonActivity = autoclass(
+                "org.kivy.android.PythonActivity"
+            )
+
+            context = PythonActivity.mActivity
+
+            preferences = context.getSharedPreferences(
+                "bank_notifications",
+                0,
+            )
+
+            notification_id = preferences.getLong(
+                "notification_id",
+                0,
+            )
+
+            if notification_id == 0:
+                return
+
+            if notification_id == self.last_notification_id:
+                return
+
+            self.last_notification_id = notification_id
+
+            package_name = preferences.getString(
+                "package_name",
+                "",
+            ) or ""
+
+            title = preferences.getString(
+                "title",
+                "",
+            ) or ""
+
+            text = preferences.getString(
+                "text",
+                "",
+            ) or ""
+
+            combined_text = "\n".join(
+                part.strip()
+                for part in (title, text)
+                if part and part.strip()
+            )
+
+            Logger.info(f"BankTTS: {package_name} {combined_text}")
+            
+
+            if combined_text:
+                self.process_notification(combined_text)
+
+        except Exception:
+            Logger.exception("BankTTS: 실제 알림 확인 오류")
+
 
     # =====================================================
     # 설정 UI
@@ -742,6 +824,10 @@ class BankTTSApp(App):
         )
 
     def on_stop(self) -> None:
+        if self.notification_poll_event is not None:
+            self.notification_poll_event.cancel()
+            self.notification_poll_event = None
+
         self.tts.stop()
 
 

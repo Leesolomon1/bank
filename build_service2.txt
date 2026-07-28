@@ -1,0 +1,525 @@
+# Ensure build layout
+# Check configuration tokens
+# Preparing build
+# Check requirements for android
+# Search for Git (git)
+#  -> found at /usr/bin/git
+# Search for Cython (cython)
+#  -> found at /home/leesolomon/venv_buildozer/bin/cython
+# Search for Java compiler (javac)
+#  -> found at /usr/bin/javac
+# Search for Java keytool (keytool)
+#  -> found at /usr/bin/keytool
+# Install platform
+# Run 'git config --get remote.origin.url' ...
+# Cwd /home/leesolomon/bank/.buildozer/android/platform/python-for-android
+https://github.com/kivy/python-for-android.git
+# Run 'git branch -vv' ...
+# Cwd /home/leesolomon/bank/.buildozer/android/platform/python-for-android
+* master 58d21141 [origin/master] Merge pull request #3321 from kivy/release-2026.05.09
+# Run '/home/leesolomon/venv_buildozer/bin/python3 -m pip install -q appdirs colorama>=0.3.3 jinja2 sh>=2, <3.0; sys_platform!="win32" meson ninja build toml packaging setuptools wheel~=0.43.0' ...
+# Cwd None
+# Apache ANT found at /home/leesolomon/.buildozer/android/platform/apache-ant-1.9.4
+# Android SDK found at /home/leesolomon/.buildozer/android/platform/android-sdk
+# Recommended android's NDK version by p4a is: 28c
+# Android NDK found at /home/leesolomon/.buildozer/android/platform/android-ndk-r25b
+# Run '/home/leesolomon/venv_buildozer/bin/python3 -m pythonforandroid.toolchain aab -h --color=always --storage-dir=/home/leesolomon/bank/.buildozer/android/platform/build-arm64-v8a --ndk-api=24 --ignore-setup-py --debug' ...
+# Cwd /home/leesolomon/bank/.buildozer/android/platform/python-for-android
+# Check application requirements
+# Compile platform
+# Run '/home/leesolomon/venv_buildozer/bin/python3 -m pythonforandroid.toolchain create --dist_name=banktts --bootstrap=sdl2 --requirements=python3==3.11.9,hostpython3==3.11.9,kivy==2.3.0,pyjnius --arch=arm64-v8a --copy-libs --color=always --storage-dir=/home/leesolomon/bank/.buildozer/android/platform/build-arm64-v8a --ndk-api=24 --ignore-setup-py --debug' ...
+# Cwd /home/leesolomon/bank/.buildozer/android/platform/python-for-android
+[WARNING]: prerequisites.py is experimental and does not support all prerequisites yet.
+[WARNING]: Please report any issues to the python-for-android issue tracker.
+[WARNING]: prerequisites.py is experimental and does not support all prerequisites yet.
+[WARNING]: Please report any issues to the python-for-android issue tracker.
+[1m[INFO][0m:    Recipe python3: version "3.11.9" requested
+[1m[INFO][0m:    Recipe hostpython3: version "3.11.9" requested
+[1m[INFO][0m:    Recipe kivy: version "2.3.0" requested
+[1m[INFO][0m:    Will compile for the following archs: arm64-v8a
+[1m[INFO][0m:    Found Android API target in $ANDROIDAPI: 34
+[1m[INFO][0m:    Available Android APIs are (34, 36)
+[1m[INFO][0m:    Requested API target 34 is available, continuing.
+[1m[INFO][0m:    Found NDK dir in $ANDROIDNDK: /home/leesolomon/.buildozer/android/platform/android-ndk-r25b
+[1m[INFO][0m:    Found NDK version 25b
+[1m[INFO][0m:    Getting NDK API version (i.e. minimum supported API) from user argument
+[1m[INFO][0m:    ccache is missing, the build will not be optimized in the future.
+[1m[90m[DEBUG][39m[0m:   All possible dists: []
+[1m[90m[DEBUG][39m[0m:   Dist matching name and arch: []
+[1m[90m[DEBUG][39m[0m:   Dist matching ndk_api and recipe: []
+[1m[INFO][0m:    No existing dists meet the given requirements!
+[1m[INFO][0m:    [1m[94mNo dist exists that meets your requirements, so one will be built.[0m
+[1m[INFO][0m:    Found a single valid recipe set: ['hostpython3', 'libffi', 'openssl', 'sdl2_image', 'sdl2_mixer', 'sdl2_ttf', 'six', 'sqlite3', 'python3', 'sdl2', 'pyjnius', 'setuptools', 'android', 'kivy']
+[1m[INFO][0m:    The selected bootstrap is sdl2
+[1m[INFO][0m:    [1m[32m# Creating dist with sdl2 bootstrap[0m[39m
+[1m[INFO][0m:    [1m[94mDist will have name banktts and requirements (python3, hostpython3, kivy, pyjnius)[0m
+[1m[INFO][0m:    Dist contains the following requirements as recipes: ['hostpython3', 'libffi', 'openssl', 'sdl2_image', 'sdl2_mixer', 'sdl2_ttf', 'sqlite3', 'python3', 'sdl2', 'pyjnius', 'setuptools', 'android', 'kivy']
+[1m[INFO][0m:    Dist will also contain modules (certifi, requests, chardet, filetype, idna, six, urllib3) installed from pip
+[1m[INFO][0m:    Dist will be build in mode debug
+[1m[INFO][0m:    [36m-> directory context /home/leesolomon/bank/.buildozer/android/platform/build-arm64-v8a/build/bootstrap_builds/sdl2[39m
+[1m[INFO][0m:    [36m<- directory context /home/leesolomon/bank/.buildozer/android/platform/python-for-android[39m
+[1m[90m[DEBUG][39m[0m:   Create directory /home/leesolomon/bank/.buildozer/android/platform/build-arm64-v8a/dists/banktts
+[1m[INFO][0m:    [1m[94mRecipe build order is ['hostpython3', 'libffi', 'openssl', 'sdl2_image', 'sdl2_mixer', 'sdl2_ttf', 'sqlite3', 'python3', 'sdl2', 'pyjnius', 'setuptools', 'android', 'kivy'][0m
+[1m[INFO][0m:    [1m[94mThe requirements (certifi, chardet, filetype, idna, requests, six, urllib3) were not found as recipes, they will be installed with pip.[0m
+[1m[INFO][0m:    [1m[32m# Downloading recipes [0m[39m
+[1m[INFO][0m:    [1m[32mDownloading hostpython3[0m[39m
+[1m[INFO][0m:    [36m-> directory context /home/leesolomon/bank/.buildozer/android/platform/build-arm64-v8a/packages/hostpython3[39m
+[1m[90m[DEBUG][39m[0m:   [90m->[0m running basename https://github.com/python/cpython/archive/refs/tags/v3.11.9.tar.gz[0m
+[1m[90m[DEBUG][39m[0m:   	v3.11.9.tar.gz
+[1m[INFO][0m:    hostpython3 download already cached, skipping
+[1m[INFO][0m:    [36m<- directory context /home/leesolomon/bank/.buildozer/android/platform/python-for-android[39m
+[1m[INFO][0m:    [1m[32mDownloading libffi[0m[39m
+[1m[INFO][0m:    [36m-> directory context /home/leesolomon/bank/.buildozer/android/platform/build-arm64-v8a/packages/libffi[39m
+[1m[90m[DEBUG][39m[0m:   [90m->[0m running basename https://github.com/libffi/libffi/archive/v3.4.2.tar.gz[0m
+[1m[90m[DEBUG][39m[0m:   	v3.4.2.tar.gz
+[1m[INFO][0m:    libffi download already cached, skipping
+[1m[INFO][0m:    [36m<- directory context /home/leesolomon/bank/.buildozer/android/platform/python-for-android[39m
+[1m[INFO][0m:    [1m[32mDownloading openssl[0m[39m
+[1m[INFO][0m:    [36m-> directory context /home/leesolomon/bank/.buildozer/android/platform/build-arm64-v8a/packages/openssl[39m
+[1m[90m[DEBUG][39m[0m:   [90m->[0m running basename https://www.openssl.org/source/openssl-3.3.1.tar.gz[0m
+[1m[90m[DEBUG][39m[0m:   	openssl-3.3.1.tar.gz
+[1m[INFO][0m:    openssl download already cached, skipping
+[1m[INFO][0m:    [36m<- directory context /home/leesolomon/bank/.buildozer/android/platform/python-for-android[39m
+[1m[INFO][0m:    [1m[32mDownloading sdl2_image[0m[39m
+[1m[INFO][0m:    [36m-> directory context /home/leesolomon/bank/.buildozer/android/platform/build-arm64-v8a/packages/sdl2_image[39m
+[1m[90m[DEBUG][39m[0m:   [90m->[0m running basename https://github.com/libsdl-org/SDL_image/releases/download/release-2.8.2/SDL2_image-2.8.2.tar.gz[0m
+[1m[90m[DEBUG][39m[0m:   	SDL2_image-2.8.2.tar.gz
+[1m[INFO][0m:    sdl2_image download already cached, skipping
+[1m[INFO][0m:    [36m<- directory context /home/leesolomon/bank/.buildozer/android/platform/python-for-android[39m
+[1m[INFO][0m:    [1m[32mDownloading sdl2_mixer[0m[39m
+[1m[INFO][0m:    [36m-> directory context /home/leesolomon/bank/.buildozer/android/platform/build-arm64-v8a/packages/sdl2_mixer[39m
+[1m[90m[DEBUG][39m[0m:   [90m->[0m running basename https://github.com/libsdl-org/SDL_mixer/releases/download/release-2.6.3/SDL2_mixer-2.6.3.tar.gz[0m
+[1m[90m[DEBUG][39m[0m:   	SDL2_mixer-2.6.3.tar.gz
+[1m[INFO][0m:    sdl2_mixer download already cached, skipping
+[1m[INFO][0m:    [36m<- directory context /home/leesolomon/bank/.buildozer/android/platform/python-for-android[39m
+[1m[INFO][0m:    [1m[32mDownloading sdl2_ttf[0m[39m
+[1m[INFO][0m:    [36m-> directory context /home/leesolomon/bank/.buildozer/android/platform/build-arm64-v8a/packages/sdl2_ttf[39m
+[1m[90m[DEBUG][39m[0m:   [90m->[0m running basename https://github.com/libsdl-org/SDL_ttf/releases/download/release-2.22.0/SDL2_ttf-2.22.0.tar.gz[0m
+[1m[90m[DEBUG][39m[0m:   	SDL2_ttf-2.22.0.tar.gz
+[1m[INFO][0m:    sdl2_ttf download already cached, skipping
+[1m[INFO][0m:    [36m<- directory context /home/leesolomon/bank/.buildozer/android/platform/python-for-android[39m
+[1m[INFO][0m:    [1m[32mDownloading sqlite3[0m[39m
+[1m[INFO][0m:    [36m-> directory context /home/leesolomon/bank/.buildozer/android/platform/build-arm64-v8a/packages/sqlite3[39m
+[1m[90m[DEBUG][39m[0m:   [90m->[0m running basename https://github.com/sqlite/sqlite/archive/refs/tags/version-3.50.4.tar.gz[0m
+[1m[90m[DEBUG][39m[0m:   	version-3.50.4.tar.gz
+[1m[INFO][0m:    sqlite3 download already cached, skipping
+[1m[INFO][0m:    [36m<- directory context /home/leesolomon/bank/.buildozer/android/platform/python-for-android[39m
+[1m[INFO][0m:    [1m[32mDownloading python3[0m[39m
+[1m[INFO][0m:    [36m-> directory context /home/leesolomon/bank/.buildozer/android/platform/build-arm64-v8a/packages/python3[39m
+[1m[90m[DEBUG][39m[0m:   [90m->[0m running basename https://github.com/python/cpython/archive/refs/tags/v3.11.9.tar.gz[0m
+[1m[90m[DEBUG][39m[0m:   	v3.11.9.tar.gz
+[1m[INFO][0m:    python3 download already cached, skipping
+[1m[INFO][0m:    [36m<- directory context /home/leesolomon/bank/.buildozer/android/platform/python-for-android[39m
+[1m[INFO][0m:    [1m[32mDownloading sdl2[0m[39m
+[1m[INFO][0m:    [36m-> directory context /home/leesolomon/bank/.buildozer/android/platform/build-arm64-v8a/packages/sdl2[39m
+[1m[90m[DEBUG][39m[0m:   [90m->[0m running basename https://github.com/libsdl-org/SDL/releases/download/release-2.30.11/SDL2-2.30.11.tar.gz[0m
+[1m[90m[DEBUG][39m[0m:   	SDL2-2.30.11.tar.gz
+[1m[INFO][0m:    sdl2 download already cached, skipping
+[1m[INFO][0m:    [36m<- directory context /home/leesolomon/bank/.buildozer/android/platform/python-for-android[39m
+[1m[INFO][0m:    [1m[32mDownloading pyjnius[0m[39m
+[1m[INFO][0m:    [36m-> directory context /home/leesolomon/bank/.buildozer/android/platform/build-arm64-v8a/packages/pyjnius[39m
+[1m[90m[DEBUG][39m[0m:   [90m->[0m running basename https://github.com/kivy/pyjnius/archive/1.7.0.zip[0m
+[1m[90m[DEBUG][39m[0m:   	1.7.0.zip
+[1m[INFO][0m:    pyjnius download already cached, skipping
+[1m[INFO][0m:    [36m<- directory context /home/leesolomon/bank/.buildozer/android/platform/python-for-android[39m
+[1m[INFO][0m:    [1m[32mDownloading setuptools[0m[39m
+[1m[INFO][0m:    Skipping setuptools download as no URL is set
+[1m[INFO][0m:    [1m[32mDownloading android[0m[39m
+[1m[INFO][0m:    Skipping android download as no URL is set
+[1m[INFO][0m:    [1m[32mDownloading kivy[0m[39m
+[1m[INFO][0m:    [36m-> directory context /home/leesolomon/bank/.buildozer/android/platform/build-arm64-v8a/packages/kivy[39m
+[1m[90m[DEBUG][39m[0m:   [90m->[0m running basename https://github.com/kivy/kivy/archive/2.3.0.zip[0m
+[1m[90m[DEBUG][39m[0m:   	2.3.0.zip
+[1m[INFO][0m:    kivy download already cached, skipping
+[1m[INFO][0m:    [36m<- directory context /home/leesolomon/bank/.buildozer/android/platform/python-for-android[39m
+[1m[INFO][0m:    [1m[32m# Building all recipes for arch arm64-v8a[0m[39m
+[1m[INFO][0m:    [1m[32m# Unpacking recipes[0m[39m
+[1m[INFO][0m:    [1m[32mUnpacking hostpython3 for arm64-v8a[0m[39m
+[1m[90m[DEBUG][39m[0m:   [90m->[0m running basename https://github.com/python/cpython/archive/refs/tags/v3.11.9.tar.gz[0m
+[1m[90m[DEBUG][39m[0m:   	v3.11.9.tar.gz
+[1m[INFO][0m:    [36m-> directory context /home/leesolomon/bank/.buildozer/android/platform/build-arm64-v8a/build/other_builds/hostpython3/desktop[39m
+[1m[INFO][0m:    hostpython3 is already unpacked, skipping
+[1m[INFO][0m:    [36m<- directory context /home/leesolomon/bank/.buildozer/android/platform/python-for-android[39m
+[1m[INFO][0m:    [1m[32mUnpacking libffi for arm64-v8a[0m[39m
+[1m[90m[DEBUG][39m[0m:   [90m->[0m running basename https://github.com/libffi/libffi/archive/v3.4.2.tar.gz[0m
+[1m[90m[DEBUG][39m[0m:   	v3.4.2.tar.gz
+[1m[INFO][0m:    [36m-> directory context /home/leesolomon/bank/.buildozer/android/platform/build-arm64-v8a/build/other_builds/libffi/arm64-v8a__ndk_target_24[39m
+[1m[INFO][0m:    libffi is already unpacked, skipping
+[1m[INFO][0m:    [36m<- directory context /home/leesolomon/bank/.buildozer/android/platform/python-for-android[39m
+[1m[INFO][0m:    [1m[32mUnpacking openssl for arm64-v8a[0m[39m
+[1m[90m[DEBUG][39m[0m:   [90m->[0m running basename https://www.openssl.org/source/openssl-3.3.1.tar.gz[0m
+[1m[90m[DEBUG][39m[0m:   	openssl-3.3.1.tar.gz
+[1m[INFO][0m:    [36m-> directory context /home/leesolomon/bank/.buildozer/android/platform/build-arm64-v8a/build/other_builds/openssl/arm64-v8a__ndk_target_24[39m
+[1m[INFO][0m:    openssl is already unpacked, skipping
+[1m[INFO][0m:    [36m<- directory context /home/leesolomon/bank/.buildozer/android/platform/python-for-android[39m
+[1m[INFO][0m:    [1m[32mUnpacking sdl2_image for arm64-v8a[0m[39m
+[1m[90m[DEBUG][39m[0m:   [90m->[0m running basename https://github.com/libsdl-org/SDL_image/releases/download/release-2.8.2/SDL2_image-2.8.2.tar.gz[0m
+[1m[90m[DEBUG][39m[0m:   	SDL2_image-2.8.2.tar.gz
+[1m[INFO][0m:    [36m-> directory context /home/leesolomon/bank/.buildozer/android/platform/build-arm64-v8a/build/bootstrap_builds/sdl2/jni[39m
+[1m[INFO][0m:    sdl2_image is already unpacked, skipping
+[1m[INFO][0m:    [36m<- directory context /home/leesolomon/bank/.buildozer/android/platform/python-for-android[39m
+[1m[INFO][0m:    [1m[32mUnpacking sdl2_mixer for arm64-v8a[0m[39m
+[1m[90m[DEBUG][39m[0m:   [90m->[0m running basename https://github.com/libsdl-org/SDL_mixer/releases/download/release-2.6.3/SDL2_mixer-2.6.3.tar.gz[0m
+[1m[90m[DEBUG][39m[0m:   	SDL2_mixer-2.6.3.tar.gz
+[1m[INFO][0m:    [36m-> directory context /home/leesolomon/bank/.buildozer/android/platform/build-arm64-v8a/build/bootstrap_builds/sdl2/jni[39m
+[1m[INFO][0m:    sdl2_mixer is already unpacked, skipping
+[1m[INFO][0m:    [36m<- directory context /home/leesolomon/bank/.buildozer/android/platform/python-for-android[39m
+[1m[INFO][0m:    [1m[32mUnpacking sdl2_ttf for arm64-v8a[0m[39m
+[1m[90m[DEBUG][39m[0m:   [90m->[0m running basename https://github.com/libsdl-org/SDL_ttf/releases/download/release-2.22.0/SDL2_ttf-2.22.0.tar.gz[0m
+[1m[90m[DEBUG][39m[0m:   	SDL2_ttf-2.22.0.tar.gz
+[1m[INFO][0m:    [36m-> directory context /home/leesolomon/bank/.buildozer/android/platform/build-arm64-v8a/build/bootstrap_builds/sdl2/jni[39m
+[1m[INFO][0m:    sdl2_ttf is already unpacked, skipping
+[1m[INFO][0m:    [36m<- directory context /home/leesolomon/bank/.buildozer/android/platform/python-for-android[39m
+[1m[INFO][0m:    [1m[32mUnpacking sqlite3 for arm64-v8a[0m[39m
+[1m[90m[DEBUG][39m[0m:   [90m->[0m running basename https://github.com/sqlite/sqlite/archive/refs/tags/version-3.50.4.tar.gz[0m
+[1m[90m[DEBUG][39m[0m:   	version-3.50.4.tar.gz
+[1m[INFO][0m:    [36m-> directory context /home/leesolomon/bank/.buildozer/android/platform/build-arm64-v8a/build/other_builds/sqlite3/arm64-v8a__ndk_target_24[39m
+[1m[INFO][0m:    sqlite3 is already unpacked, skipping
+[1m[INFO][0m:    [36m<- directory context /home/leesolomon/bank/.buildozer/android/platform/python-for-android[39m
+[1m[INFO][0m:    [1m[32mUnpacking python3 for arm64-v8a[0m[39m
+[1m[90m[DEBUG][39m[0m:   [90m->[0m running basename https://github.com/python/cpython/archive/refs/tags/v3.11.9.tar.gz[0m
+[1m[90m[DEBUG][39m[0m:   	v3.11.9.tar.gz
+[1m[INFO][0m:    [36m-> directory context /home/leesolomon/bank/.buildozer/android/platform/build-arm64-v8a/build/other_builds/python3/arm64-v8a__ndk_target_24[39m
+[1m[INFO][0m:    python3 is already unpacked, skipping
+[1m[INFO][0m:    [36m<- directory context /home/leesolomon/bank/.buildozer/android/platform/python-for-android[39m
+[1m[INFO][0m:    [1m[32mUnpacking sdl2 for arm64-v8a[0m[39m
+[1m[90m[DEBUG][39m[0m:   [90m->[0m running basename https://github.com/libsdl-org/SDL/releases/download/release-2.30.11/SDL2-2.30.11.tar.gz[0m
+[1m[90m[DEBUG][39m[0m:   	SDL2-2.30.11.tar.gz
+[1m[INFO][0m:    [36m-> directory context /home/leesolomon/bank/.buildozer/android/platform/build-arm64-v8a/build/bootstrap_builds/sdl2/jni[39m
+[1m[INFO][0m:    sdl2 is already unpacked, skipping
+[1m[INFO][0m:    [36m<- directory context /home/leesolomon/bank/.buildozer/android/platform/python-for-android[39m
+[1m[INFO][0m:    [1m[32mUnpacking pyjnius for arm64-v8a[0m[39m
+[1m[90m[DEBUG][39m[0m:   [90m->[0m running basename https://github.com/kivy/pyjnius/archive/1.7.0.zip[0m
+[1m[90m[DEBUG][39m[0m:   	1.7.0.zip
+[1m[INFO][0m:    [36m-> directory context /home/leesolomon/bank/.buildozer/android/platform/build-arm64-v8a/build/other_builds/pyjnius-sdl2/arm64-v8a__ndk_target_24[39m
+[1m[INFO][0m:    pyjnius is already unpacked, skipping
+[1m[INFO][0m:    [36m<- directory context /home/leesolomon/bank/.buildozer/android/platform/python-for-android[39m
+[1m[INFO][0m:    [1m[32mUnpacking setuptools for arm64-v8a[0m[39m
+[1m[INFO][0m:    Skipping setuptools unpack as no URL is set
+[1m[90m[DEBUG][39m[0m:   Remove directory and subdirectory /home/leesolomon/bank/.buildozer/android/platform/build-arm64-v8a/build/other_builds/android-sdl2/arm64-v8a__ndk_target_24/android
+[1m[90m[DEBUG][39m[0m:   [90m->[0m running cp -a /home/leesolomon/bank/.buildozer/android/platform/python-for-android/pythonforandroid/recipes/android/src /home/leesolomon/bank/.buildozer/android/platform/build-arm64-v8a/build/other_builds/android-sdl2/arm64-v8a__ndk_target_24/android[0m
+[1m[INFO][0m:    [1m[32mUnpacking kivy for arm64-v8a[0m[39m
+[1m[90m[DEBUG][39m[0m:   [90m->[0m running basename https://github.com/kivy/kivy/archive/2.3.0.zip[0m
+[1m[90m[DEBUG][39m[0m:   	2.3.0.zip
+[1m[INFO][0m:    [36m-> directory context /home/leesolomon/bank/.buildozer/android/platform/build-arm64-v8a/build/other_builds/kivy-sdl2/arm64-v8a__ndk_target_24[39m
+[1m[INFO][0m:    kivy is already unpacked, skipping
+[1m[INFO][0m:    [36m<- directory context /home/leesolomon/bank/.buildozer/android/platform/python-for-android[39m
+[1m[INFO][0m:    [1m[32m# Prebuilding recipes[0m[39m
+[1m[INFO][0m:    python3 has no prebuild_arm64_v8a, skipping
+[1m[INFO][0m:    [1m[32mPrebuilding hostpython3 for arm64-v8a[0m[39m
+[1m[INFO][0m:    hostpython3 has no prebuild_arm64_v8a, skipping
+[1m[INFO][0m:    [1m[32mApplying patches for hostpython3[arm64-v8a][0m[39m
+[1m[INFO][0m:    [1m[32mhostpython3 already patched, skipping[0m[39m
+[1m[INFO][0m:    [1m[32mPrebuilding libffi for arm64-v8a[0m[39m
+[1m[INFO][0m:    libffi has no prebuild_arm64_v8a, skipping
+[1m[INFO][0m:    [1m[32mApplying patches for libffi[arm64-v8a][0m[39m
+[1m[INFO][0m:    [1m[32mlibffi already patched, skipping[0m[39m
+[1m[INFO][0m:    [1m[32mPrebuilding openssl for arm64-v8a[0m[39m
+[1m[INFO][0m:    openssl has no prebuild_arm64_v8a, skipping
+[1m[INFO][0m:    [1m[32mPrebuilding sdl2_image for arm64-v8a[0m[39m
+[1m[INFO][0m:    sdl2_image has no prebuild_arm64_v8a, skipping
+[1m[INFO][0m:    [1m[32mApplying patches for sdl2_image[arm64-v8a][0m[39m
+[1m[INFO][0m:    [1m[32msdl2_image already patched, skipping[0m[39m
+[1m[INFO][0m:    [1m[32mPrebuilding sdl2_mixer for arm64-v8a[0m[39m
+[1m[INFO][0m:    sdl2_mixer has no prebuild_arm64_v8a, skipping
+[1m[INFO][0m:    [1m[32mPrebuilding sdl2_ttf for arm64-v8a[0m[39m
+[1m[INFO][0m:    sdl2_ttf has no prebuild_arm64_v8a, skipping
+[1m[INFO][0m:    [1m[32mPrebuilding sqlite3 for arm64-v8a[0m[39m
+[1m[INFO][0m:    sqlite3 has no prebuild_arm64_v8a, skipping
+[1m[INFO][0m:    [1m[32mPrebuilding python3 for arm64-v8a[0m[39m
+[1m[INFO][0m:    python3 has no prebuild_arm64_v8a, skipping
+[1m[INFO][0m:    [1m[32mApplying patches for python3[arm64-v8a][0m[39m
+[1m[INFO][0m:    [1m[32mpython3 already patched, skipping[0m[39m
+[1m[INFO][0m:    [1m[32mPrebuilding sdl2 for arm64-v8a[0m[39m
+[1m[INFO][0m:    sdl2 has no prebuild_arm64_v8a, skipping
+[1m[INFO][0m:    [1m[32mPrebuilding pyjnius for arm64-v8a[0m[39m
+[1m[INFO][0m:    pyjnius has no prebuild_arm64_v8a, skipping
+[1m[INFO][0m:    [1m[32mApplying patches for pyjnius[arm64-v8a][0m[39m
+[1m[INFO][0m:    [1m[32mpyjnius already patched, skipping[0m[39m
+[1m[INFO][0m:    [1m[32mPrebuilding setuptools for arm64-v8a[0m[39m
+[1m[INFO][0m:    setuptools has no prebuild_arm64_v8a, skipping
+[1m[INFO][0m:    [1m[32mPrebuilding android for arm64-v8a[0m[39m
+[1m[INFO][0m:    android has no prebuild_arm64_v8a, skipping
+[1m[INFO][0m:    [36m-> directory context /home/leesolomon/bank/.buildozer/android/platform/build-arm64-v8a/build/other_builds/android-sdl2/arm64-v8a__ndk_target_24/android[39m
+[1m[INFO][0m:    [36m<- directory context /home/leesolomon/bank/.buildozer/android/platform/python-for-android[39m
+[1m[INFO][0m:    [1m[32mPrebuilding kivy for arm64-v8a[0m[39m
+[1m[INFO][0m:    kivy has no prebuild_arm64_v8a, skipping
+[1m[INFO][0m:    [1m[32mApplying patches for kivy[arm64-v8a][0m[39m
+[1m[INFO][0m:    [1m[32mkivy already patched, skipping[0m[39m
+[1m[INFO][0m:    [1m[32m# Building recipes[0m[39m
+[1m[INFO][0m:    [1m[32mBuilding hostpython3 for arm64-v8a[0m[39m
+[1m[INFO][0m:    hostpython3 said it is already built, skipping
+[1m[INFO][0m:    [1m[32mBuilding libffi for arm64-v8a[0m[39m
+[1m[INFO][0m:    libffi said it is already built, skipping
+[1m[90m[DEBUG][39m[0m:   [90m->[0m running cp /home/leesolomon/bank/.buildozer/android/platform/build-arm64-v8a/build/other_builds/libffi/arm64-v8a__ndk_target_24/libffi/.libs/libffi.so /home/leesolomon/bank/.buildozer/android/platform/build-arm64-v8a/build/libs_collections/banktts/arm64-v8a[0m
+[1m[INFO][0m:    [1m[32mBuilding openssl for arm64-v8a[0m[39m
+[1m[INFO][0m:    openssl said it is already built, skipping
+[1m[90m[DEBUG][39m[0m:   [90m->[0m running cp /home/leesolomon/bank/.buildozer/android/platform/build-arm64-v8a/build/other_builds/openssl/arm64-v8a__ndk_target_24/openssl3/libssl.so /home/leesolomon/bank/.buildozer/android/platform/build-arm64-v8a/build/other_builds/openssl/arm64-v8a__ndk_target_24/openssl3/libcrypto.so /home/leesolomon/bank/.buildozer/android/platform/build-arm64-v8a/build/libs_collections/banktts/arm64-v8a[0m
+[1m[INFO][0m:    [1m[32mBuilding sdl2_image for arm64-v8a[0m[39m
+[1m[INFO][0m:    [1m[32mBuilding sdl2_mixer for arm64-v8a[0m[39m
+[1m[INFO][0m:    [1m[32mBuilding sdl2_ttf for arm64-v8a[0m[39m
+[1m[INFO][0m:    [1m[32mBuilding sqlite3 for arm64-v8a[0m[39m
+[1m[INFO][0m:    sqlite3 said it is already built, skipping
+[1m[90m[DEBUG][39m[0m:   [90m->[0m running cp /home/leesolomon/bank/.buildozer/android/platform/build-arm64-v8a/build/other_builds/sqlite3/arm64-v8a__ndk_target_24/sqlite3/libsqlite3.so /home/leesolomon/bank/.buildozer/android/platform/build-arm64-v8a/build/libs_collections/banktts/arm64-v8a[0m
+[1m[INFO][0m:    [1m[32mBuilding python3 for arm64-v8a[0m[39m
+[1m[INFO][0m:    python3 said it is already built, skipping
+[1m[90m[DEBUG][39m[0m:   [90m->[0m running cp /home/leesolomon/bank/.buildozer/android/platform/build-arm64-v8a/build/other_builds/python3/arm64-v8a__ndk_target_24/python3/./android-build/libpythonbin.so /home/leesolomon/bank/.buildozer/android/platform/build-arm64-v8a/build/libs_collections/banktts/arm64-v8a[0m
+[1m[INFO][0m:    [1m[32mBuilding sdl2 for arm64-v8a[0m[39m
+[1m[INFO][0m:    sdl2 said it is already built, skipping
+[1m[INFO][0m:    [1m[32mBuilding pyjnius for arm64-v8a[0m[39m
+[1m[INFO][0m:    Python package already exists in site-packages
+[1m[INFO][0m:    pyjnius said it is already built, skipping
+[1m[INFO][0m:    [1m[32mBuilding setuptools for arm64-v8a[0m[39m
+[1m[INFO][0m:    Python package already exists in site-packages
+[1m[INFO][0m:    setuptools said it is already built, skipping
+[1m[INFO][0m:    [1m[32mBuilding android for arm64-v8a[0m[39m
+[1m[INFO][0m:    Python package already exists in site-packages
+[1m[INFO][0m:    android said it is already built, skipping
+[1m[INFO][0m:    [1m[32mBuilding kivy for arm64-v8a[0m[39m
+[1m[INFO][0m:    Python package already exists in site-packages
+[1m[INFO][0m:    kivy said it is already built, skipping
+[1m[INFO][0m:    [1m[32m# Biglinking object files[0m[39m
+[1m[31m[WARNING][39m[0m: Context's python recipe found, skipping biglink (will this work?)
+[1m[INFO][0m:    [1m[32m# Postbuilding recipes[0m[39m
+[1m[INFO][0m:    [1m[32mPostbuilding hostpython3 for arm64-v8a[0m[39m
+[1m[INFO][0m:    [1m[32mPostbuilding libffi for arm64-v8a[0m[39m
+[1m[INFO][0m:    [1m[32mPostbuilding openssl for arm64-v8a[0m[39m
+[1m[INFO][0m:    [1m[32mPostbuilding sdl2_image for arm64-v8a[0m[39m
+[1m[INFO][0m:    [1m[32mPostbuilding sdl2_mixer for arm64-v8a[0m[39m
+[1m[INFO][0m:    [1m[32mPostbuilding sdl2_ttf for arm64-v8a[0m[39m
+[1m[INFO][0m:    [1m[32mPostbuilding sqlite3 for arm64-v8a[0m[39m
+[1m[INFO][0m:    [1m[32mPostbuilding python3 for arm64-v8a[0m[39m
+[1m[INFO][0m:    [1m[32mPostbuilding sdl2 for arm64-v8a[0m[39m
+[1m[INFO][0m:    [1m[32mPostbuilding pyjnius for arm64-v8a[0m[39m
+[1m[INFO][0m:    Copying pyjnius java class to classes build dir
+[1m[INFO][0m:    [36m-> directory context /home/leesolomon/bank/.buildozer/android/platform/build-arm64-v8a/build/other_builds/pyjnius-sdl2/arm64-v8a__ndk_target_24/pyjnius[39m
+[1m[90m[DEBUG][39m[0m:   [90m->[0m running cp -a jnius/src/org /home/leesolomon/bank/.buildozer/android/platform/build-arm64-v8a/build/javaclasses/banktts[0m
+[1m[INFO][0m:    [36m<- directory context /home/leesolomon/bank/.buildozer/android/platform/python-for-android[39m
+[1m[INFO][0m:    [1m[32mPostbuilding setuptools for arm64-v8a[0m[39m
+[1m[INFO][0m:    [1m[32mPostbuilding android for arm64-v8a[0m[39m
+[1m[INFO][0m:    [1m[32mPostbuilding kivy for arm64-v8a[0m[39m
+[1m[INFO][0m:    [1m[32m# Installing pure Python modules[0m[39m
+[1m[INFO][0m:    *** PYTHON PACKAGE / PROJECT INSTALL STAGE FOR ARCH: arm64-v8a ***
+[1m[90m[DEBUG][39m[0m:   [90m->[0m running pip3 install certifi chardet filetype idna requests six urllib3 --dry-run --break-system-packages --ignore-installed --disable-pip-version-check --only-binary=:all: --report /tmp/tmptthwk0la -q --platform=android_24_arm64_v8a --platform=android_24_aarch64 --python-version 3.11.9[0m
+[1m[INFO][0m:    Extra resolved pure python dependencies :
+[1m[INFO][0m:     
+[1m[INFO][0m:      [32mcharset-normalizer[37m : [1m3.4.9[0m
+[1m[INFO][0m:     
+[1m[INFO][0m:    The requirements (https://files.pythonhosted.org/packages/98/2b/f97f1c193fb855c345d678f5077d6926034db0722df74c8f057020e05a25/charset_normalizer-3.4.9-py3-none-any.whl) don't have recipes, attempting to install them with pip
+[1m[INFO][0m:    If this fails, it may mean that the module has compiled components and needs a recipe.
+[1m[INFO][0m:    [36m-> directory context /home/leesolomon/bank/.buildozer/android/platform/build-arm64-v8a/build[39m
+[1m[90m[DEBUG][39m[0m:   [90m->[0m running python -m venv venv[0m
+[1m[INFO][0m:    Upgrade pip to latest version
+[1m[90m[DEBUG][39m[0m:   [90m->[0m running bash -c source venv/bin/activate && pip install -U pip[0m
+[1m[90m[DEBUG][39m[0m:   	[31mERROR: Exception:
+[1m[90m[DEBUG][39m[0m:   	Traceback (most recent call last):
+[1m[90m[DEBUG][39m[0m:   	  File "/home/leesolomon/bank/.buildozer/android/platform/build-arm64-v8a/build/venv/lib/python3.11/site-packages/pip/_internal/cli/base_command.py", line 180, in exc_logging_wrapper
+[1m[90m[DEBUG][39m[0m:   	    status = run_func(*args)
+[1m[90m[DEBUG][39m[0m:   	             ^^^^^^^^^^^^^^^
+[1m[90m[DEBUG][39m[0m:   	  File "/home/leesolomon/bank/.buildozer/android/platform/build-arm64-v8a/build/venv/lib/python3.11/site-packages/pip/_internal/cli/req_command.py", line 245, in wrapper
+[1m[90m[DEBUG][39m[0m:   	    return func(self, options, args)
+[1m[90m[DEBUG][39m[0m:   	           ^^^^^^^^^^^^^^^^^^^^^^^^^
+[1m[90m[DEBUG][39m[0m:   	  File "/home/leesolomon/bank/.buildozer/android/platform/build-arm64-v8a/build/venv/lib/python3.11/site-packages/pip/_internal/commands/install.py", line 362, in run
+[1m[90m[DEBUG][39m[0m:   	    resolver = self.make_resolver(
+[1m[90m[DEBUG][39m[0m:   	               ^^^^^^^^^^^^^^^^^^^
+[1m[90m[DEBUG][39m[0m:   	  File "/home/leesolomon/bank/.buildozer/android/platform/build-arm64-v8a/build/venv/lib/python3.11/site-packages/pip/_internal/cli/req_command.py", line 353, in make_resolver
+[1m[90m[DEBUG][39m[0m:   	    import pip._internal.resolution.resolvelib.resolver
+[1m[90m[DEBUG][39m[0m:   	  File "/home/leesolomon/bank/.buildozer/android/platform/build-arm64-v8a/build/venv/lib/python3.11/site-packages/pip/_internal/resolution/resolvelib/resolver.py", line 8, in <module>
+[1m[90m[DEBUG][39m[0m:   	    from pip._vendor.resolvelib import BaseReporter, ResolutionImpossible
+[1m[90m[DEBUG][39m[0m:   	  File "/home/leesolomon/bank/.buildozer/android/platform/build-arm64-v8a/build/venv/lib/python3.11/site-packages/pip/_vendor/resolvelib/__init__.py", line 19, in <module>
+[1m[90m[DEBUG][39m[0m:   	    from .resolvers import (
+[1m[90m[DEBUG][39m[0m:   	  File "/home/leesolomon/bank/.buildozer/android/platform/build-arm64-v8a/build/venv/lib/python3.11/site-packages/pip/_vendor/resolvelib/resolvers/__init__.py", line 1, in <module>
+[1m[90m[DEBUG][39m[0m:   	    from ..structs import RequirementInformation
+[1m[90m[DEBUG][39m[0m:   	ImportError: cannot import name 'RequirementInformation' from 'pip._vendor.resolvelib.structs' (/home/leesolomon/bank/.buildozer/android/platform/build-arm64-v8a/build/venv/lib/python3.11/site-packages/pip/_vendor/resolvelib/structs.py)[0m[31m
+[1m[90m[DEBUG][39m[0m:   	[0m
+[1m[90m[DEBUG][39m[0m:   	[1m[[0m[34;49mnotice[0m[1;39;49m][0m[39;49m A new release of pip is available: [0m[31;49m24.0[0m[39;49m -> [0m[32;49m26.1.2[0m
+[1m[90m[DEBUG][39m[0m:   	[1m[[0m[34;49mnotice[0m[1;39;49m][0m[39;49m To update, run: [0m[32;49mpip install --upgrade pip[0m
+Exception in thread background thread for pid 118138:
+Traceback (most recent call last):
+  File "/usr/lib/python3.14/threading.py", line 1082, in _bootstrap_inner
+    self._context.run(self.run)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/usr/lib/python3.14/threading.py", line 1024, in run
+    self._target(*self._args, **self._kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leesolomon/venv_buildozer/lib/python3.14/site-packages/sh/__init__.py", line 1709, in wrap
+    fn(*rgs, **kwargs)
+    ~~^^^^^^^^^^^^^^^^
+  File "/home/leesolomon/venv_buildozer/lib/python3.14/site-packages/sh/__init__.py", line 2720, in background_thread
+    handle_exit_code(exit_code)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/home/leesolomon/venv_buildozer/lib/python3.14/site-packages/sh/__init__.py", line 2411, in fn
+    return self.command.handle_command_exit_code(exit_code)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/home/leesolomon/venv_buildozer/lib/python3.14/site-packages/sh/__init__.py", line 820, in handle_command_exit_code
+    raise exc
+sh.ErrorReturnCode_2: 
+
+  RAN: /usr/bin/bash -c 'source venv/bin/activate && pip install -U pip'
+
+  STDOUT:
+[31mERROR: Exception:
+Traceback (most recent call last):
+  File "/home/leesolomon/bank/.buildozer/android/platform/build-arm64-v8a/build/venv/lib/python3.11/site-packages/pip/_internal/cli/base_command.py", line 180, in exc_logging_wrapper
+    status = run_func(*args)
+             ^^^^^^^^^^^^^^^
+  File "/home/leesolomon/bank/.buildozer/android/platform/build-arm64-v8a/build/venv/lib/python3.11/site-packages/pip/_internal/cli/req_command.py", line 245, in wrapper
+    return func(self, options, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leesolomon/bank/.buildozer/android/platform/build-arm64-v8a/build/venv/lib/python3.11/site-packages/pip/_internal/commands/install.py", line 362, in run
+    resolver = self.make_resolver(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/home/leesolomon/bank/.buildozer/android/platform/build-arm64-v8a/build/venv/lib/python3.11/site-packages/pip/_internal/cli/req_command.py", line 353, in make_resolver
+    import pip._internal.resolution.resolvelib.resolver
+  File "/home/leesolomon/bank/.buildozer/android/platform/build-arm64-v8a/build/venv/lib/python3.11/site-packages/pip/_internal/resolution/resolvelib/resolver.py", line 8, in <module>
+    from pip._vendor.resolvelib import BaseReporter, ResolutionImpossible
+  File "/home/leesolomon/bank/.buildozer/android/platform/build-arm64-v8a/build/venv/lib/python3.11/site-packages/pip/_vendor/resolvelib/__init__.py", line 19, in <module>
+    from .resolvers import (
+  File "/home/leesolomon/bank/.buildozer/android/platform/build-arm64-v8a/build/venv/lib/python3.11/site-packages/pip/_vendor/resolvelib/resolvers/__init__.py", line 1, in <module>
+    from ..structs import RequirementInformation
+ImportError: cannot import name 'RequirementInformation' from 'pip._vendor.resolvelib.structs' (/home/leesolomon/bank/.buildozer/android/platform/build-arm64-v8a/build/venv/lib/python3.11/site-packages/pip/_vendor/resolvelib/structs.py)[0m[31m
+[0m
+[1m[[0m[34;49mnotice[0m[1;39;49m][0m[39;49m A new release of pip is available: [0m[31;49m24.0[0m[39;49m -> [0m[32;49m26.1.2[0m
+[1m[[0m[34;49mnotice[0m[1;39;49m][0m[39;49m To update, run: [0m[32;49mpip install --upgrade pip[0m
+
+
+  STDERR:
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/leesolomon/bank/.buildozer/android/platform/python-for-android/pythonforandroid/toolchain.py", line 1290, in <module>
+    main()
+    ~~~~^^
+  File "/home/leesolomon/bank/.buildozer/android/platform/python-for-android/pythonforandroid/entrypoints.py", line 18, in main
+    ToolchainCL()
+    ~~~~~~~~~~~^^
+  File "/home/leesolomon/bank/.buildozer/android/platform/python-for-android/pythonforandroid/toolchain.py", line 721, in __init__
+    getattr(self, command)(args)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/home/leesolomon/bank/.buildozer/android/platform/python-for-android/pythonforandroid/toolchain.py", line 104, in wrapper_func
+    build_dist_from_args(ctx, dist, args)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/leesolomon/bank/.buildozer/android/platform/python-for-android/pythonforandroid/toolchain.py", line 163, in build_dist_from_args
+    build_recipes(build_order, python_modules, ctx,
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                  getattr(args, "private", None),
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+                  ),
+                  ^^
+                 )
+                 ^
+  File "/home/leesolomon/bank/.buildozer/android/platform/python-for-android/pythonforandroid/build.py", line 554, in build_recipes
+    run_pymodules_install(
+    ~~~~~~~~~~~~~~~~~~~~~^
+        ctx, arch, python_modules, project_dir,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        ignore_setup_py=ignore_project_setup_py
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/leesolomon/bank/.buildozer/android/platform/python-for-android/pythonforandroid/build.py", line 877, in run_pymodules_install
+    shprint(sh.bash, '-c', (
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+        "source venv/bin/activate && pip install -U pip"
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ), _env=copy.copy(base_env))
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leesolomon/bank/.buildozer/android/platform/python-for-android/pythonforandroid/logger.py", line 174, in shprint
+    for line in output:
+                ^^^^^^
+  File "/home/leesolomon/venv_buildozer/lib/python3.14/site-packages/sh/__init__.py", line 876, in __next__
+    self.wait()
+    ~~~~~~~~~^^
+  File "/home/leesolomon/venv_buildozer/lib/python3.14/site-packages/sh/__init__.py", line 793, in wait
+    self.handle_command_exit_code(exit_code)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/home/leesolomon/venv_buildozer/lib/python3.14/site-packages/sh/__init__.py", line 820, in handle_command_exit_code
+    raise exc
+sh.ErrorReturnCode_2: 
+
+  RAN: /usr/bin/bash -c 'source venv/bin/activate && pip install -U pip'
+
+  STDOUT:
+[31mERROR: Exception:
+Traceback (most recent call last):
+  File "/home/leesolomon/bank/.buildozer/android/platform/build-arm64-v8a/build/venv/lib/python3.11/site-packages/pip/_internal/cli/base_command.py", line 180, in exc_logging_wrapper
+    status = run_func(*args)
+             ^^^^^^^^^^^^^^^
+  File "/home/leesolomon/bank/.buildozer/android/platform/build-arm64-v8a/build/venv/lib/python3.11/site-packages/pip/_internal/cli/req_command.py", line 245, in wrapper
+    return func(self, options, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leesolomon/bank/.buildozer/android/platform/build-arm64-v8a/build/venv/lib/python3.11/site-packages/pip/_internal/commands/install.py", line 362, in run
+    resolver = self.make_resolver(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/home/leesolomon/bank/.buildozer/android/platform/build-arm64-v8a/build/venv/lib/python3.11/site-packages/pip/_internal/cli/req_command.py", line 353, in make_resolver
+    import pip._internal.resolution.resolvelib.resolver
+  File "/home/leesolomon/bank/.buildozer/android/platform/build-arm64-v8a/build/venv/lib/python3.11/site-packages/pip/_internal/resolution/resolvelib/resolver.py", line 8, in <module>
+    from pip._vendor.resolvelib import BaseReporter, ResolutionImpossible
+  File "/home/leesolomon/bank/.buildozer/android/platform/build-arm64-v8a/build/venv/lib/python3.11/site-packages/pip/_vendor/resolvelib/__init__.py", line 19, in <module>
+    from .resolvers import (
+  File "/home/leesolomon/bank/.buildozer/android/platform/build-arm64-v8a/build/venv/lib/python3.11/site-packages/pip/_vendor/resolvelib/resolvers/__init__.py", line 1, in <module>
+    from ..structs import RequirementInformation
+ImportError: cannot import name 'RequirementInformation' from 'pip._vendor.resolvelib.structs' (/home/leesolomon/bank/.buildozer/android/platform/build-arm64-v8a/build/venv/lib/python3.11/site-packages/pip/_vendor/resolvelib/structs.py)[0m[31m
+[0m
+[1m[[0m[34;49mnotice[0m[1;39;49m][0m[39;49m A new release of pip is available: [0m[31;49m24.0[0m[39;49m -> [0m[32;49m26.1.2[0m
+[1m[[0m[34;49mnotice[0m[1;39;49m][0m[39;49m To update, run: [0m[32;49mpip install --upgrade pip[0m
+
+
+  STDERR:
+
+# Command failed: ('/home/leesolomon/venv_buildozer/bin/python3', '-m', 'pythonforandroid.toolchain', 'create', '--dist_name=banktts', '--bootstrap=sdl2', '--requirements=python3==3.11.9,hostpython3==3.11.9,kivy==2.3.0,pyjnius', '--arch=arm64-v8a', '--copy-libs', '--color=always', '--storage-dir=/home/leesolomon/bank/.buildozer/android/platform/build-arm64-v8a', '--ndk-api=24', '--ignore-setup-py', '--debug')
+# Error code: 1
+# ENVIRONMENT:
+#     SHELL = '/bin/bash'
+#     WSL2_GUI_APPS_ENABLED = '1'
+#     WSL_DISTRO_NAME = 'Ubuntu'
+#     NAME = 'DESKTOP-TLDPS1M'
+#     PWD = '/home/leesolomon/bank'
+#     LOGNAME = 'leesolomon'
+#     HOME = '/home/leesolomon'
+#     LANG = 'C.UTF-8'
+#     WSL_INTEROP = '/run/WSL/337_interop'
+#     LS_COLORS = 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.swp=00;90:*.tmp=00;90:*.dpkg-dist=00;90:*.dpkg-old=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:'
+#     VIRTUAL_ENV = '/home/leesolomon/venv_buildozer'
+#     WAYLAND_DISPLAY = 'wayland-0'
+#     LESSCLOSE = '/usr/bin/lesspipe %s %s'
+#     TERM = 'xterm-256color'
+#     LESSOPEN = '| /usr/bin/lesspipe %s'
+#     USER = 'leesolomon'
+#     DISPLAY = ':0'
+#     SHLVL = '1'
+#     VIRTUAL_ENV_PROMPT = 'venv_buildozer'
+#     XDG_RUNTIME_DIR = '/run/user/1000'
+#     PS1 = ('(venv_buildozer) \\[\\e]0;\\u@\\h: '
+ '\\w\\a\\]${debian_chroot:+($debian_chroot)}\\[\\033[01;32m\\]\\u@\\h\\[\\033[00m\\]:\\[\\033[01;34m\\]\\w\\[\\033[00m\\]\\$ ')
+#     WSLENV = ''
+#     XDG_DATA_DIRS = '/usr/local/share:/usr/share:/var/lib/snapd/desktop'
+#     PATH = ('/home/leesolomon/.buildozer/android/platform/apache-ant-1.9.4/bin:/home/leesolomon/venv_buildozer/bin:/home/leesolomon/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Users/wjdgy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand:/mnt/c/Users/wjdgy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli:/mnt/c/Windows/System32/OpenSSH:/mnt/c/Program '
+ 'Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files '
+ '(x86)/Common Files/Oracle/Java/java8path:/mnt/c/Program Files (x86)/Common '
+ 'Files/Oracle/Java/javapath:/mnt/c/Users/wjdgy/OneDrive/바탕 '
+ '화면/노래봇/ffmpeg-7.1.1-essentials_build/ffmpeg-7.1.1-essentials_build/bin:/mnt/c/Pro:/mnt/c/Program '
+ 'Files/Git/cmd:/mnt/c/Users/wjdgy/OneDrive/바탕 '
+ '화면/ffmpeg-2025-11-10-git-133a0bcb13-full_build/bin:/mnt/c/Program '
+ 'Files/NVIDIA Corporation/NVIDIA App/NvDLISR:/mnt/c/Program '
+ 'Files/dotnet/:/mnt/c/Users/wjdgy/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/wjdgy/AppData/Local/Programs/Microsoft '
+ 'VS Code/bin:/mnt/c/Users/wjdgy/OneDrive/바탕 '
+ '화면/ffmpeg-2026-04-26-git-4867d251ad-essentials_build/ffmpeg-2026-04-26-git-4867d251ad-essentials_build/binc:/Users/wjdgy/.vscode/extensions/vscjava.vscode-java-debug-0.59.0/bundled/scripts/noConfigScripts:/mnt/c/Users/wjdgy/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts:/snap/bin')
+#     DBUS_SESSION_BUS_ADDRESS = 'unix:path=/run/user/1000/bus'
+#     HOSTTYPE = 'x86_64'
+#     PULSE_SERVER = 'unix:/mnt/wslg/PulseServer'
+#     OLDPWD = '/home/leesolomon/bank'
+#     _ = '/home/leesolomon/venv_buildozer/bin/buildozer'
+#     PACKAGES_PATH = '/home/leesolomon/.buildozer/android/packages'
+#     ANDROIDSDK = '/home/leesolomon/.buildozer/android/platform/android-sdk'
+#     ANDROIDNDK = '/home/leesolomon/.buildozer/android/platform/android-ndk-r25b'
+#     ANDROIDAPI = '34'
+#     ANDROIDMINAPI = '24'
+# 
+# Buildozer failed to execute the last command
+# The error might be hidden in the log above this error
+# Please read the full log, and search for it before
+# raising an issue with buildozer itself.
+# In case of a bug report, please add a full log with log_level = 2

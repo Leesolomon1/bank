@@ -1,0 +1,11 @@
+<service
+    android:name="com.leesolomon.banktts.NotificationService"
+    android:label="은행 알림 음성 안내"
+    android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE"
+    android:exported="false">
+
+    <intent-filter>
+        <action android:name="android.service.notification.NotificationListenerService" />
+    </intent-filter>
+
+</service>
